@@ -23,7 +23,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	video.play();
 
 	// set volume and display it to the user 
-	document.querySelector("#volume").innerHTML = String(video.volume *100) 
+	document.querySelector("#volume").innerHTML = String(video.volume *100) + "%";
 		
 });
 
@@ -95,7 +95,7 @@ document.querySelector("#slider").addEventListener("input", function() {
 
 	// if slider is moved then the volume level and the displayed volume level are updated 
 	video.volume = document.querySelector("#slider").value / 100;
-	document.querySelector("#volume").innerHTML = String(video.volume * 100);
+	document.querySelector("#volume").innerHTML = String(video.volume * 100) +"%"; 
 	
 });
 
@@ -129,7 +129,7 @@ document.querySelector("#vintage").addEventListener("click", function() {
 // script for the "original" button 
 document.querySelector("#orig").addEventListener("click", function() {
 
-	console.log("Using Original Style");
+	console.log("Remove the OldSchool Style");
 
 	// remove oldschool, or set to original 
 	video.classList.remove("oldSchool")
